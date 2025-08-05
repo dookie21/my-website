@@ -3,16 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emman Website</title>
+    <title>John Emmanuel R. Santos</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <!-- ICON -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div id="hero">
-        <hr style="margin-bottom: 10px;">
-        <h1>Sample website by John Emmanuel R. Santos</h1>
-        <p>For web hosting activity IT305W :&#41;</p>
-        <hr style="margin-top: 10px;">
+    <!-- NAV BAR -->
+     <!-- <div id="navbar">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+     </div> -->
+
+
+    <!-- MAIN PROFILE -->
+    <div class="section profile" id="about">
+        <div id="picture-container" data-aos="fade-right">
+            <img src="image/picture.jpg">    
+        </div>
+
+        <div id="bio-container" data-aos="fade-left">
+            <h1 class="plex-bold">Hello there!</h1>
+            <h3 class="plex-semi">I'm John Emmanuel R. Santos</h3>
+            <p class="plex-regular">I’m a 3rd year BSIT student from 3H G2, studying at BulSU Main Campus in Malolos. I’m from Balagtas, Bulacan. I like trying out new hobbies, can’t really stick to just one, I’m always jumping into whatever catches my interest.</p>
+        </div>
     </div>
+
+
+
+    <!-- <div class="section location"></div> -->
+    <div class="section">
+        <h1 class="plex-bold" id="hobby-title" data-aos="fade-left">My Hobbies</h1>
+
+        <div class="hobbies" id="hobbies" data-aos="fade-right">
+            <div class="hobby-container">
+                <img src="image/icons8-instrument-32.png">
+                <p class="plex-regular">Music</p>
+                <p class="plex-small"> Music’s always been a part of me. I mainly play bass, but I also rock around with drums and guitar. It’s where I reset, express, and just rock it out.</p>
+            </div>
+
+            <div class="hobby-container">
+                <img src="image/icons8-games-50.png">
+                <p class="plex-regular">Gaming</p>
+                <p class="plex-small">Gaming’s my go-to escape when life gets loud. It’s how I chill, connect with friends, and kill time on slow days. Win or lose, it’s always a good time.</p>
+            </div>
+
+            <div class="hobby-container">
+                <img src="image/icons8-bicycle-30.png">
+                <p class="plex-regular">Cycling</p>
+                <p class="plex-small"> I enjoy riding my bike around places I like—whether for commute, school, or peace of mind. It's my way of staying active and clearing my head.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section contacts" id="contacts">
+        <h1 class="plex-bold" id="hobby-title" data-aos="fade-left">Contact Me</h1>
+        <div id="banner" data-aos="fade-right">
+            <div class="contact-container">
+                <a href="https://www.facebook.com/profile.php?id=100093218630447" target="_blank" class="fa fa-facebook"></a>
+                <p class="plex-regular">Facebook</p>
+            </div>
+
+            <div class="contact-container">
+                <a href="https://www.instagram.com/ughweeee/" target="_blank" class="fa fa-instagram"></a>
+                <p class="plex-regular">Instagram</p>
+            </div>
+
+            <div class="contact-container">
+                <a href="" class="fa fa-phone"></a>
+                <p class="plex-regular">0947 626 4561</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

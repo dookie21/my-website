@@ -1,31 +1,245 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+}
+
+.section {
+    padding: 50px;
+}
+
+.plex-bold {
+    font-family: "IBM Plex Sans", system-ui;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 56px;
+    color: white;
+
+}
+
+.plex-semi {
+    font-family: "IBM Plex Sans", system-ui;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 28px;
+    color: white;
+
+}
+
+.plex-regular {
+    font-family: "IBM Plex Sans", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    color: white;
+}
+
+.plex-small {
+    font-family: "IBM Plex Sans", system-ui;
+    font-style: normal;
+    letter-spacing: 1.5;
+    font-size: 14px;
+    color: white;
 }
 
 body {
+    background-color: #0a0a0a;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+/* #navbar {
     background-color: black;
+    position: fixed;
     width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 50px;
 }
 
-#hero {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
 }
 
-h1,
-p {
+#navbar ul li {
+    font-family: "IBM Plex Sans", system-ui;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    font-size: 14px;
     color: white;
-    font-weight: 800;
-
+    cursor: pointer;
+    transition: all 0.3s ease-in;
 }
 
-p {
-    margin-top: 10px;
-    font-size: 21px;
+#navbar ul li:hover {
+    transform: scale(1.15);
+} */
+
+
+
+/* MAIN PROFILE */
+.profile {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 2rem;
+}
+
+.profile > div {
+    flex: 1;
+    min-width: 300px;
+}
+
+#picture-container {
+    text-align: right;
+}
+
+#picture-container img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(255, 255, 255, 0.4),
+        0 0 50px rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+#picture-container img:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.8),
+        0 0 35px rgba(255, 255, 255, 0.5),
+        0 0 70px rgba(255, 255, 255, 0.3);
+}
+
+
+#bio-container p {
+    max-width: 48ch;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+
+/* Hobbies */
+#hobby-title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.hobbies {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.hobbies > div {
+    height: 280px;
+    width: 280px;
+    background-color: black;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 
+        0 6px 15px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(255, 255, 255, 0.2),
+        0 0 50px rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.hobbies > div:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 
+        0 12px 20px rgba(0, 0, 0, 0.7),
+        0 0 40px rgba(255, 255, 255, 0.4),
+        0 0 80px rgba(255, 255, 255, 0.3);
+}
+
+.hobby-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.hobby-container > img {
+    display: block;
+    margin: auto;
+}
+
+.hobby-container > img:nth-child(odd)  {
+    height: 70px;
+    width: 70px;
+}
+
+.hobby-container p {
+    color: white;
+    margin-top: 20px;
+}
+
+/* CONTACTS */
+.contacts {
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 !important;
+}
+
+#banner {
+    /* background-color: #e4e4e4; */
+    background-color: black;
+    z-index: 99;
+    height: 200px;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0a0a;
+    border: none;
+    border-radius: 18px;
+}
+
+#banner > div {
+    flex: 1;
+    text-align: center;
+}
+
+.fa {
+  background-color: black;
+  color: #fff;
+  border-radius: 50%;
+  padding: 25px;
+  text-decoration: none;
+  width: 100px;
+  height: 100px;
+  transition: 0.3s ease;
+  font-size: 0;
+  margin-bottom: 20px;
+}
+
+.fa::before {
+  font-size: 50px;
+}
+
+.fa:hover {
+  background-color: #ffffff30;
+  transform: scale(1.1);
 }
